@@ -1,0 +1,6 @@
+.today_weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
