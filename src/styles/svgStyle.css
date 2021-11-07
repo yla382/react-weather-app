@@ -1,0 +1,13 @@
+.svg_style {
+    width: 100px; 
+    height: 100px;
+}
+
+.weather_status {
+    font-size: 14px;
+}
+
+/* .svg_style g {
+    stroke: white;
+    stroke-width: 2;
+} */

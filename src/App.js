@@ -1,7 +1,7 @@
 import './App.css';
 import CurrentWeatherContainer from './components/CurrentWeatherContainer';
 import WeeklyWeatherContainer from './components/WeeklyWeatherContainer';
-import station from './img/station.jpg';
+import desert from './img/desert.jpg';
 
 import axios from 'axios';
 
@@ -19,7 +19,7 @@ function App() {
   });
 
   return (
-    <div className="App" style={{ backgroundImage: `url(${station})`}}>
+    <div className="App" style={{ backgroundImage: `url(${desert})`, backgroundSize: "cover"}}>
         <CurrentWeatherContainer/>
         <WeeklyWeatherContainer/>
     </div>
