@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useCallback  } from "react";
 import '../styles/Clock.css';
 
 const days = {
@@ -26,19 +26,19 @@ const months = {
     11 : 'Dec'
 };
 
-const Clock = () => {
-    const [date, setDate] = useState(new Date());
+const Clock = ({date, setDate}) => {
+    // const [date, setDate] = useState(new Date());
 
-    const currentTime = () => {
+    const currentTime = useCallback(() => {
         setDate(new Date());
-    }
+    }, [setDate]);
 
     useEffect(() =>{
         const interval = setInterval(() => {
             currentTime();
         }, 1000);
         return  () => clearInterval(interval);
-    },[]);
+    },[currentTime]);
 
 
     return (
